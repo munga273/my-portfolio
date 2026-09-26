@@ -7,10 +7,10 @@ This is my personal portfolio website, built for CSN 1101:Web Technologies and i
  - 'images/'- profile photo
 
 ## Live Deployments
-- Github Pages: https://aleko273.github.io/my-portfolio/
+- Github Pages: https://munga273.github.io/my-portfolio/
 
-- Vercel: https://my-portfolio.vercel.app
+- Vercel: https://my-portfolio-eta-dusky-72.vercel.app/
 
 ## Contact 
 - Email: alexmungai273@gmail.com
-- Github: https://github.com/Aleko273
+- Github: https://github.com/munga273
