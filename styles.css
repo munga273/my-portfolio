@@ -151,6 +151,14 @@ main section li:last-child {
   margin-bottom: 0;
 }
  
+main section a {
+  color: var(--accent);
+}
+ 
+main section a:hover {
+  text-decoration: underline;
+}
+ 
 /* ---------- Footer ---------- */
 footer {
   border-top: 1px solid var(--surface-border);
