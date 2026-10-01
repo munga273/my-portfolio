@@ -183,6 +183,194 @@ footer {
   font-weight: 600;
 }
  
+/* ---------- Skills (progress bars) ---------- */
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+ 
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+ 
+.skill-bar {
+  background: var(--bg);
+  border: 1px solid var(--surface-border);
+  border-radius: 999px;
+  height: 10px;
+  overflow: hidden;
+}
+ 
+.skill-fill {
+  background: var(--accent);
+  height: 100%;
+  border-radius: 999px;
+}
+ 
+/* ---------- Project cards ---------- */
+.section-intro {
+  color: var(--ink-soft);
+  margin: -6px 0 18px;
+  font-size: 0.9rem;
+}
+ 
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+ 
+.project-card {
+  background: var(--bg);
+  border: 1px solid var(--surface-border);
+  border-radius: 10px;
+  padding: 18px;
+  cursor: pointer;
+}
+ 
+.project-thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+ 
+.project-card h3 {
+  margin: 0 0 6px;
+  color: var(--ink);
+  font-size: 1.05rem;
+}
+ 
+.project-summary {
+  color: var(--ink-soft);
+  margin: 0;
+  font-size: 0.92rem;
+}
+ 
+.project-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+ 
+.project-card.is-expanded .project-details {
+  max-height: 200px;
+  margin-top: 12px;
+}
+ 
+.project-details p {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  margin: 0 0 8px;
+}
+ 
+.project-tech {
+  color: var(--ink) !important;
+}
+ 
+.project-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+ 
+.project-link--soon {
+  color: var(--ink-soft);
+  cursor: default;
+}
+ 
+/* ---------- Services tags ---------- */
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+ 
+.tag-list li {
+  background: var(--bg);
+  border: 1px solid var(--surface-border);
+  color: var(--ink-soft);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  margin-bottom: 0;
+}
+ 
+/* ---------- Contact form ---------- */
+.form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.form-group label {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  margin-bottom: 6px;
+}
+ 
+.form-group input,
+.form-group textarea {
+  background: var(--bg);
+  border: 1px solid var(--surface-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+ 
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+ 
+.error-msg {
+  color: #FF6B6B;
+  font-size: 0.82rem;
+  min-height: 1.2em;
+  margin-top: 4px;
+}
+ 
+.submit-btn {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 22px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+ 
+.submit-btn:hover {
+  opacity: 0.9;
+}
+ 
+.form-success {
+  color: var(--accent);
+  margin-top: 14px;
+  font-size: 0.9rem;
+}
+ 
 /* ---------- Responsive ---------- */
 @media (max-width: 480px) {
   .header-row {

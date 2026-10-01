@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Mungai - Projects & Skills</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="wrap header-row">
+      <span class="wordmark">Alex Mungai</span>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="index.html#contact">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skill-list">
+
+        <div class="skill">
+          <div class="skill-label">
+            <span>HTML5</span><span>85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-label">
+            <span>CSS3</span><span>80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-label">
+            <span>JavaScript</span><span>65%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width: 65%;"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-label">
+            <span>Git &amp; GitHub</span><span>75%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width: 75%;"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-label">
+            <span>Problem Solving</span><span>80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="my-projects">
+      <h2>My Projects</h2>
+      <p class="section-intro">Click any card to see more detail.</p>
+
+      <div class="project-grid">
+
+        <article class="project-card" tabindex="0">
+          <div class="project-thumb" aria-hidden="true">PP</div>
+          <h3>Personal Portfolio Website</h3>
+          <p class="project-summary">A responsive personal portfolio built from scratch with semantic HTML and a custom dark theme.</p>
+          <div class="project-details">
+            <p>Built as coursework for CSN 1101. Covers a home page, this projects page, and a validated contact form, deployed on two separate platforms.</p>
+            <p class="project-tech"><strong>Tech:</strong> HTML5, CSS3, JavaScript</p>
+          </div>
+          <a href="https://github.com/munga273/my-portfolio" class="project-link">View Repo</a>
+        </article>
+
+        <article class="project-card" tabindex="0">
+          <div class="project-thumb" aria-hidden="true">SM</div>
+          <h3>Sacco Management System</h3>
+          <p class="project-summary">A coursework system for tracking member accounts, contributions, and loans for a savings cooperative.</p>
+          <div class="project-details">
+            <p>Developed as part of a course project exploring data management and basic CRUD operations for cooperative savings groups.</p>
+            <p class="project-tech"><strong>Tech:</strong> HTML, CSS, (backend in progress)</p>
+          </div>
+          <span class="project-link project-link--soon">Coming Soon</span>
+        </article>
+
+        <article class="project-card" tabindex="0">
+          <div class="project-thumb" aria-hidden="true">FM</div>
+          <h3>Finance Management System</h3>
+          <p class="project-summary">A coursework project for tracking income, expenses, and simple budgeting.</p>
+          <div class="project-details">
+            <p>Focused on building a clean, usable interface for everyday personal finance tracking as a course assignment.</p>
+            <p class="project-tech"><strong>Tech:</strong> HTML, CSS, (backend in progress)</p>
+          </div>
+          <span class="project-link project-link--soon">Coming Soon</span>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <h2>Services</h2>
+      <ul class="tag-list">
+        <li>Basic Website Design</li>
+        <li>HTML &amp; CSS Tutoring</li>
+        <li>Simple Bug Fixing</li>
+      </ul>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact-form">
+      <h2>Get In Touch</h2>
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+          <span class="error-msg" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <span class="error-msg" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <span class="error-msg" id="messageError"></span>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+        <p class="form-success" id="formSuccess" hidden>Thanks! Your message looks good and would be sent from here.</p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer id="contact" class="wrap footer-row">
+    <p>alexmungai273@gmail.com</p>
+    <a href="https://github.com/Aleko273">github</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
