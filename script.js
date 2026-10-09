@@ -15,6 +15,61 @@ projectCards.forEach(function (card) {
   });
 });
  
+// ---------- Live GitHub repos (Fetch API) ----------
+const repoStatus = document.getElementById("repoStatus");
+const repoList = document.getElementById("repoList");
+ 
+if (repoStatus && repoList) {
+  const GITHUB_USERNAME = "munga273";
+  const apiUrl = "https://api.github.com/users/" + GITHUB_USERNAME + "/repos?sort=updated&per_page=6";
+ 
+  fetch(apiUrl)
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error("GitHub API responded with status " + response.status);
+      }
+      return response.json();
+    })
+    .then(function (repos) {
+      repoStatus.textContent = "";
+ 
+      if (repos.length === 0) {
+        repoStatus.textContent = "No public repositories found yet.";
+        return;
+      }
+ 
+      repos.forEach(function (repo) {
+        const card = document.createElement("div");
+        card.className = "repo-card";
+ 
+        const title = document.createElement("h3");
+        const link = document.createElement("a");
+        link.href = repo.html_url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = repo.name;
+        title.appendChild(link);
+ 
+        const description = document.createElement("p");
+        description.textContent = repo.description ? repo.description : "No description provided.";
+ 
+        const meta = document.createElement("p");
+        meta.className = "repo-meta";
+        meta.textContent = "⭐ " + repo.stargazers_count + "  ·  " + (repo.language || "N/A");
+ 
+        card.appendChild(title);
+        card.appendChild(description);
+        card.appendChild(meta);
+        repoList.appendChild(card);
+      });
+    })
+    .catch(function (error) {
+      repoStatus.textContent = "Couldn't load repositories right now. Please try again later.";
+      repoStatus.classList.add("is-error");
+      console.error("GitHub API fetch error:", error);
+    });
+}
+ 
 // ---------- Contact form validation ----------
 const contactForm = document.getElementById("contactForm");
  
